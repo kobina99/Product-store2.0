@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'storepage.dart'; // Import StorePage
+import 'storepage.dart'; 
 
 import 'package:provider/provider.dart';
 import 'checkoutpage.dart';
@@ -7,7 +7,7 @@ import 'checkoutpage.dart';
 void main() {
   runApp(
     ChangeNotifierProvider(
-      create: (_) => Cart(), // Replace with your Cart class
+      create: (_) => Cart(), 
       child: MyApp(),
     ),
   );
@@ -39,33 +39,33 @@ class WelcomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        // Background image
+        
         decoration: const BoxDecoration(),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              // Shopping bag icon
+             
               Icon(
                 Icons.shopping_bag,
                 size: 72,
                 color: Theme.of(context).colorScheme.secondary,
               ),
-              SizedBox(height: 20), // Space between the icon and text
-              // Welcome text
+              SizedBox(height: 20), 
+              
               Text(
                 'Welcome to the Item Store',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black, // White text for contrast
+                  color: Colors.black, 
                 ),
               ),
               SizedBox(height: 20),
-              // Start shopping button
+              
               ElevatedButton(
                 onPressed: () {
-                  // Navigate to the StorePage
+                  
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => StorePage()),
@@ -73,10 +73,10 @@ class WelcomePage extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor:
-                      Colors.orange, // Change the button's background color
-                  foregroundColor: Colors.white, // Change the text color
+                      Colors.orange, 
+                  foregroundColor: Colors.white, 
                   padding: EdgeInsets.symmetric(
-                      horizontal: 30, vertical: 12), // Optional: Adjust padding
+                      horizontal: 30, vertical: 12), 
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(
                         8), // Optional: Add rounded corners
@@ -85,8 +85,8 @@ class WelcomePage extends StatelessWidget {
                 child: Text(
                   'Start Shopping',
                   style: TextStyle(
-                    fontSize: 16, // Optional: Adjust font size
-                    fontWeight: FontWeight.bold, // Optional: Adjust font weight
+                    fontSize: 16, 
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
