@@ -22,14 +22,14 @@ class CheckoutPage extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 22,
-                color: Colors.orange, // Highlight the heading
+                color: Colors.orange, 
               ),
             ),
             const SizedBox(height: 10),
             Flexible(
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.orange.shade50, // Soft background for the item list
+                  color: Colors.orange.shade50, 
                   borderRadius: BorderRadius.circular(8),
                   border: Border.all(color: Colors.orange.shade200),
                 ),
@@ -122,7 +122,7 @@ class CheckoutPage extends StatelessWidget {
 
 
 class Cart with ChangeNotifier {
-  final List<CartItem> _cartItems = [];  // Use CartItem instead of Product
+  final List<CartItem> _cartItems = [];  
 
   List<CartItem> get cartItems => _cartItems;
 
@@ -130,7 +130,7 @@ class Cart with ChangeNotifier {
 
   double get totalPrice => _cartItems.fold(0, (sum, item) => sum + item.price);
 
-  void addItem(CartItem item) {  // Ensure this method is defined
+  void addItem(CartItem item) {  
     _cartItems.add(item);
     notifyListeners();
   }
@@ -140,7 +140,7 @@ class Cart with ChangeNotifier {
     notifyListeners();
   }
 
-  void clearCart() { // New method to clear all items in the cart
+  void clearCart() { 
     _cartItems.clear();
     notifyListeners();
   }
